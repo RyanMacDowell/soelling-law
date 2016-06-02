@@ -1,0 +1,53 @@
+.NavBox {
+	background-color:#1D414D; 
+	padding-left:1px; 
+	padding-right:1px;
+}
+
+.NavBorder {
+	border-left:1px solid #fff; 
+	border-right:1px solid #fff; 
+	padding-top:12px;
+	padding-bottom:20px;
+}
+
+TD.BgndImage {
+	border-top:1px solid #666666; 
+	border-bottom:1px solid #666666; 
+	background-image:url("images/slimagecell.jpg"); 
+	background-align:top left; 
+	background-repeat: no-repeat;
+}
+
+.BodyCopy {
+	padding:15px 15px 0px 15px; 
+	width:500px; 
+	font-family:verdana, arial, geneva, helvetica, sans-serif; 
+	font-size:75%; 
+	color:#666;
+}
+
+a {
+text-decoration : underline;
+color : #004C64;
+}
+
+.copy {
+position: relative;
+left: 10px;
+top: 10px;
+color : #666;
+font : normal 75% Verdana, Arial, geneva, helvetica,sans-serif;
+margin : 0;
+margin : 4px 4px 4px 4px;
+padding : 4px 4px 4px 4px;
+}
+
+.compensation {
+color : #666;
+font : normal 100% Verdana, Arial, geneva, helvetica,sans-serif;
+margin : 4px 4px 4px 4px;
+padding : 4px 4px 4px 4px;
+}
+
+
