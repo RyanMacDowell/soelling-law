@@ -496,5 +496,29 @@ body {
   margin: auto;
   font-family: Helvetica, sans-serif;
 }
+.img {
+  background: url("images/seattle.jpg") no-repeat center center;
+  background-size: cover;
+}
 h3 {
+}
+.portrait {
+  float: left;
+  width: 164px;
+  height: 185px;
+  padding: 0 15px 0 0;
+}
+
+address {
+  padding: 20px 0 0 0;
+}
+
+.address-block {
+  display: inline-block;
+  padding: 0 10px 0 0;
+
+}
+
+.address-type {
+  font-weight: bold;
 }
