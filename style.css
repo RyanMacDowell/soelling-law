@@ -420,27 +420,88 @@ textarea {
 
 
 /* End Normalize.css */
+
+/* Start Icon fonts CSS from fontello.com */
+@font-face {
+  font-family: 'soelling-icons';
+  src: url('fonts/soelling-icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'soelling-icons';
+    src: url('../font/soelling-icons.svg?42329814#soelling-icons') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "soelling-icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-menu:before { 
+  content: '\e800'; 
+} /* '' */
+
+
+/* End Icon fonts CSS from fontello.com */
+
 @font-face {
   font-family: BebasNeue;
-  src: url(BebasNeue Regular.otf);
+  src: url(fonts/BebasNeue Regular.otf);
 }
 @font-face {
   font-family: BebasNeue;
-  src: url(BebasNeue Bold.otf);
+  src: url(fonts/BebasNeue Bold.otf);
   font-weight: bold;
 }
 @font-face {
   font-family: BebasNeue;
-  src: url(BebasNeue Light.otf);
+  src: url(fonts/BebasNeue Light.otf);
   font-weight: light;
 }
 @font-face {
   font-family: BebasNeue;
-  src: url(BebasNeue Thin.otf);
+  src: url(fonts/BebasNeue Thin.otf);
   font-weight: thin;
 }
 body {
-  font: 13px/1.4 BebasNeue, Arial, sans-serif;
+  font: 15px/1.5 BebasNeue, Arial, sans-serif;
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -453,6 +514,7 @@ body {
 .logo {
   padding: 40px 0 40px 0;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .logo-forename {
@@ -472,7 +534,6 @@ body {
 
 .main-nav {
   font-size: 15px;
-  padding: 15px 0 15px 0;
   background-color: #00796B;
   color: #FFFFFF;
   display: flex;
@@ -485,6 +546,8 @@ body {
   flex:1;
   text-align: center;
   max-width: 200px;
+  align-items: center;
+  padding: 15px 0 15px 0;
 }
 
 .main-nav a:hover {
@@ -521,4 +584,56 @@ address {
 
 .address-type {
   font-weight: bold;
+}
+
+
+
+.icon-menu, .icon-menu:before {
+  font-size: 30px;
+  display: none;
+  line-height: 45px;
+  padding: 15px 0 15px 0;
+}
+
+@media screen and (min-width:800px) {
+  .current {
+    background-color: #FFAB40;
+  }
+}
+@media screen and (max-width:800px) {
+  .icon-menu, .icon-menu:before {
+    display: inline-block;
+  }
+  
+  .main-nav {
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .main-nav a {
+    transition: all 0.5s ease;
+    visibility: visible;
+    height:100%;
+    
+  }
+
+  .main-nav.closed a {
+    flex: 0;
+    flex-basis: 0;
+    visibility: hidden;
+    height:0;
+    padding: 0;
+  }
+
+  .main-nav a.current {
+    display: inline;
+    visibility: visible;
+    font-size: 30px;
+    flex: 0;
+    order: 0;
+    height: 1em;
+    padding: 15px 0 15px 0;
+  }
+
 }
