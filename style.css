@@ -485,21 +485,25 @@ textarea {
   font-family: BebasNeue;
   src: url(fonts/BebasNeue Regular.otf);
 }
+
 @font-face {
   font-family: BebasNeue;
   src: url(fonts/BebasNeue Bold.otf);
   font-weight: bold;
 }
+
 @font-face {
   font-family: BebasNeue;
   src: url(fonts/BebasNeue Light.otf);
   font-weight: light;
 }
+
 @font-face {
   font-family: BebasNeue;
   src: url(fonts/BebasNeue Thin.otf);
   font-weight: thin;
 }
+
 body {
   font: 15px/1.5 BebasNeue, Arial, sans-serif;
   color: rgba(0, 0, 0, 0.87);
@@ -509,6 +513,10 @@ body {
   background-color: #009688;
   color: rgba(255, 255, 255, 1.0);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.logo-background {
+  background: url("images/seattle.jpg") no-repeat center center / cover;
 }
 
 .logo {
@@ -558,13 +566,16 @@ body {
   max-width: 600px;
   margin: auto;
   font-family: Helvetica, sans-serif;
+  padding-top: 14px;
 }
+
 .img {
-  background: url("images/seattle.jpg") no-repeat center center;
   background-size: cover;
 }
+
 h3 {
 }
+
 .portrait {
   float: left;
   width: 164px;
@@ -579,14 +590,11 @@ address {
 .address-block {
   display: inline-block;
   padding: 0 10px 0 0;
-
 }
 
 .address-type {
   font-weight: bold;
 }
-
-
 
 .icon-menu, .icon-menu:before {
   font-size: 30px;
@@ -595,11 +603,20 @@ address {
   padding: 15px 0 15px 0;
 }
 
+ul {
+  list-style-position: inside;
+}
+
+.resume-paragraph {
+  padding-left: 40px;
+}
+
 @media screen and (min-width:800px) {
   .current {
     background-color: #FFAB40;
   }
 }
+
 @media screen and (max-width:800px) {
   .icon-menu, .icon-menu:before {
     display: inline-block;
@@ -635,5 +652,4 @@ address {
     height: 1em;
     padding: 15px 0 15px 0;
   }
-
 }
