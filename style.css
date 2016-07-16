@@ -520,7 +520,7 @@ body {
 }
 
 .logo {
-  padding: 40px 0 40px 0;
+  padding: 60px 0 60px 0;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -555,7 +555,6 @@ body {
   text-align: center;
   max-width: 200px;
   align-items: center;
-  padding: 15px 0 15px 0;
 }
 
 .main-nav a:hover {
@@ -596,10 +595,6 @@ address {
   font-weight: bold;
 }
 
-.icon-menu {
-  padding: 15px 0 15px 0;
-}
-
 .icon-menu, .icon-menu:before {
   font-size: 30px;
   display: none;
@@ -614,16 +609,51 @@ ul {
   padding-left: 40px;
 }
 
+@media screen and (min-width:800px) {
+  .main-nav a {
+    padding: 15px 0 15px 0;
+   }
+
+  .current {
+    background-color: #FFAB40;
+  }
+}
+
 @media screen and (max-width:800px) {
+  .logo {
+    padding: 40px 0 40px 0;
+  }
+
+  .main-nav {
+    height: 300px;
+    transition: height 0.5s ease-out 0s;
+  }
+
+  .closed {
+    height: 75px;
+  }
+
   .icon-menu, .icon-menu:before {
     display: flex;
     flex-basis: 50px;
+    justify-content: center;
     width: 50px;
+    height: 45px;
+    background-color: #FFAB40;
+    padding: 0;
+    transition: background-color 0.5s ease-in 0s;
+  }
+  .main-nav.closed .icon-menu, .main-nav.closed .icon-menu:before {
+    background-color: #00796B;
   }
   
   .main-nav {
     justify-content: flex-start;
     flex-wrap: wrap;
+  }
+
+  .main-nav * {
+    padding: 15px 0 15px 0;
   }
 
   .main-nav a {
@@ -641,11 +671,7 @@ ul {
   }
 
   .main-nav.closed a {
-    flex: 0;
-    flex-basis: 0;
-    visibility: hidden;
-    height:0;
-    padding: 0;
+    display: none;
   }
 
   .main-nav.closed a.current {
@@ -655,19 +681,11 @@ ul {
   .main-nav a.current {
     display: flex;
     visibility: visible;
-    flex: 0;
+    flex-basis: 0;
+    flex-grow: 1;
     order: 2;
-    height: 1em;
-    margin: 15px 0 15px 0;
     background-color: #FFAB40;
+    padding-left: 0;
+    transition: background-color 0.5s ease-in 0s;
   }
-  .main-nav a:nth-child(2) {
-    transition: height 0.5s ease;
-  } 
-  .main-nav a:nth-child(3) {
-    transition: height 0.5s ease 0.5s;
-  } 
-  .main-nav a:nth-child(4) {
-    transition: height 0.5s ease 1s;
-  } 
 }
