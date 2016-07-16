@@ -558,7 +558,7 @@ body {
 }
 
 .main-nav a:hover {
-
+    background-color: #FFAB40;
 }
 
 .main {
@@ -599,6 +599,7 @@ address {
   font-size: 30px;
   display: none;
   line-height: 45px;
+  cursor: pointer;
 }
 
 ul {
@@ -687,5 +688,9 @@ ul {
     background-color: #FFAB40;
     padding-left: 0;
     transition: background-color 0.5s ease-in 0s;
+  }
+
+  .main {
+    padding: 0 15px 0 15px;
   }
 }

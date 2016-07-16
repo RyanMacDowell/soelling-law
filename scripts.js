@@ -7,6 +7,12 @@ $(document).ready(function() {
   $(".main-nav [href='"+page+"']").addClass("current");
 });
 
-$(".main-nav").click(function() {
-			$(".main-nav").toggleClass("closed");
-			});
+function mobileNavClickHandle() {
+	event.preventDefault();
+	$(".main-nav").toggleClass("closed");
+}
+
+$(document).ready(function() {
+$(".icon-menu").click(mobileNavClickHandle);
+$(".main-nav a.current").click(mobileNavClickHandle);
+});
